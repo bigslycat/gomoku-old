@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "build": "gulp app styles",
-    "prod": "NODE_ENV=production npm run build"
+    "prod": "NODE_ENV=production npm run build",
+    "demo": "http-server ./docs"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-less": "^3.1.0",
     "gulp-sourcemaps": "^1.6.0",
+    "http-server": "^0.9.0",
     "normalize.css": "^4.2.0",
     "object.entries": "^1.0.3",
     "polyfill-service-webpack": "^0.1.0",

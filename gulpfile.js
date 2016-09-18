@@ -18,7 +18,7 @@ const webpackConfig = require('./webpackConfig');
 gulp.task('app', () =>
   gulp.src('./src/js/app.jsx')
   .pipe(webpackStream(webpackConfig))
-  .pipe(gulp.dest('./demo/js'))
+  .pipe(gulp.dest('./docs/js'))
 );
 
 gulp.task('styles', () =>
@@ -43,5 +43,5 @@ gulp.task('styles', () =>
   ] }))
   .pipe(cleanCSS({ compatibility: 'ie8' }))
   .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest('./demo/css'))
+  .pipe(gulp.dest('./docs/css'))
 );
