@@ -22,7 +22,7 @@ function applyGameState({
   game: { state: gameState },
   state: {
     currentPlayer,
-    cells: savedCells,
+    cells: savedCells = [],
   },
 }) {
   const { cells: gameCells } = gameState;
