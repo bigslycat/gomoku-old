@@ -1,0 +1,31 @@
+parser: babel-eslint
+extends:
+  - airbnb
+env:
+  browser: true
+  jquery: true
+  node: true
+parserOptions:
+  ecmaVersion: 6
+  ecmaFeatures:
+    jsx: true
+globals:
+  __load_polyfills__: true
+  React: true
+  ReactDOM: true
+rules:
+  no-param-reassign: off
+  guard-for-in: off
+  strict:
+    - off
+    - global
+  no-console: off
+  global-require: off
+  import/no-amd: off
+  import/no-extraneous-dependencies:
+    - error
+    -
+      devDependencies: true
+      optionalDependencies: false
+      peerDependencies: false
+  react/prefer-stateless-function: off

@@ -1,0 +1,50 @@
+{
+  "name": "gomoku",
+  "version": "0.0.1",
+  "description": "Etton test",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp app styles",
+    "prod": "NODE_ENV=production npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/bigslycat/gomoku.git"
+  },
+  "author": "Pavel Tereschenko <me@pavlik.pro> (https://github.com/bigslycat)",
+  "license": "UNLICENSED",
+  "homepage": "https://bitbucket.org/bigslycat/gomoku#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-latest": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "csscomb": "^3.1.7",
+    "envify": "^1.2.1",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^10.0.0",
+    "eslint-plugin-class-property": "^1.0.1",
+    "eslint-plugin-import": "^1.13.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.0.0",
+    "glob": "^7.0.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "normalize.css": "^4.2.0",
+    "object.entries": "^1.0.3",
+    "polyfill-service-webpack": "^0.1.0",
+    "react": "^15.3.1",
+    "react-container-dimensions": "^1.3.0",
+    "react-dom": "^15.3.1",
+    "uglifyjs": "^2.4.10",
+    "webpack": "^1.13.2",
+    "webpack-stream": "^3.2.0",
+    "yaml": "^0.3.0"
+  }
+}
