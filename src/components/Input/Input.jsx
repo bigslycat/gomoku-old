@@ -1,24 +1,25 @@
 'use strict';
 
+import classNames from 'classnames';
+
 const Input = ({
-  classes = [],
+  className = [],
   style = {},
   type = 'text',
   ...props,
-}) => {
-  classes.unshift('Input');
-
-  const customProps = {
-    type,
-    style,
-    className: classes.join(' '),
-  };
-
-  return <input {...customProps} {...props} />;
-};
+}) =>
+  <input
+    type={type}
+    style={style}
+    className={classNames('Input', className)}
+    {...props}
+  />;
 
 Input.propTypes = {
-  classes: React.PropTypes.array,
+  className: React.PropTypes.oneOfType([
+    React.PropTypes.array,
+    React.PropTypes.string,
+  ]),
   style: React.PropTypes.object,
   type: React.PropTypes.string,
   defaultValue: React.PropTypes.number,

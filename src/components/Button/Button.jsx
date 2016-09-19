@@ -1,28 +1,33 @@
 'use strict';
 
+import classNames from 'classnames';
+
 const Button = ({
   children,
-  classes = [],
+  className = [],
   style = {},
+  type = 'button',
   ...props,
-}) => {
-  classes.unshift('Button');
-
-  const customProps = {
-    style,
-    type: 'button',
-    className: classes.join(' '),
-  };
-
-  return <button {...customProps} {...props}>{children}</button>;
-};
+}) =>
+  <button
+    type={type}
+    style={style}
+    className={classNames('Button', className)}
+    {...props}
+  >
+    {children}
+  </button>;
 
 Button.propTypes = {
+  className: React.PropTypes.oneOfType([
+    React.PropTypes.object,
+    React.PropTypes.string,
+  ]),
   children: React.PropTypes.string.isRequired,
   onClick: React.PropTypes.func,
   onMouseEnter: React.PropTypes.func,
-  classes: React.PropTypes.array,
   style: React.PropTypes.object,
+  type: React.PropTypes.string,
 };
 
 export default Button;

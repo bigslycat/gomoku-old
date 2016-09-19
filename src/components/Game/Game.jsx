@@ -20,7 +20,7 @@ const Game = ({
 
     <Label
       key="1"
-      classes={['Game-FieldSizeLabel']}
+      className="Game-FieldSizeLabel"
       htmlFor="Game-FieldSize"
     >Размер поля</Label>,
 
@@ -30,7 +30,7 @@ const Game = ({
       defaultValue={fieldSize}
       min={fieldSizeMin}
       max={fieldSizeMax}
-      classes={['Game-FieldSizeInput']}
+      className="Game-FieldSizeInput"
       id="Game-FieldSize"
       title={
         `Размер игрового поля (от ${fieldSizeMin} до ${fieldSizeMax} ячеек)`
@@ -40,7 +40,7 @@ const Game = ({
     <Button
       key="3"
       onClick={onNewGame}
-      classes={['Game-RestartButton']}
+      className="Game-RestartButton"
     >Новая игра</Button>,
 
     <GameField
