@@ -15,14 +15,14 @@ const Game = ({
       fieldSizeMax,
     },
   },
-}) => {
-  const game = [
+}) =>
+  <div className="Game">
 
     <Label
       key="1"
       className="Game-FieldSizeLabel"
       htmlFor="Game-FieldSize"
-    >Размер поля</Label>,
+    >Размер поля</Label>
 
     <Input
       key="2"
@@ -35,23 +35,20 @@ const Game = ({
       title={
         `Размер игрового поля (от ${fieldSizeMin} до ${fieldSizeMax} ячеек)`
       }
-    />,
+    />
 
     <Button
       key="3"
       onClick={onNewGame}
       className="Game-RestartButton"
-    >Новая игра</Button>,
+    >Новая игра</Button>
 
     <GameField
       key="4"
       fieldSize={fieldSize}
-    >{cells}</GameField>,
+    >{cells}</GameField>
 
-  ];
-
-  return <div className="Game">{game}</div>;
-};
+  </div>;
 
 Game.propTypes = {
   children: React.PropTypes.object.isRequired,
